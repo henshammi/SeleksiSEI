@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "nama_lokasi": "Jakarta",
+    "negara": "Indonesia",
+    "provinsi": "DKI Jakarta",
+    "kota": "Jakarta Selatan",
+    "created_at": 1723809600000
+  },
+  {
+    "id": "2",
+    "nama_lokasi": "Jakarta 2",
+    "negara": "Indonesia",
+    "provinsi": "DKI Jakarta",
+    "kota": "Jakarta Selatan",
+    "created_at": 1723810340687
+  },
+  {
+    "id": "4",
+    "nama_lokasi": "Jakarta 4",
+    "negara": "Indonesia",
+    "provinsi": "DKI Jakarta",
+    "kota": "Jakarta Selatan",
+    "created_at": 1723810342886
+  },
+  {
+    "id": "4",
+    "nama_lokasi": "Selangor",
+    "negara": "Indonesia",
+    "provinsi": "DKI Jakarta",
+    "kota": "Jakarta Selatan",
+    "created_at": 1723810404489
+  }
+]
