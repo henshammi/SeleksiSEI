@@ -2,10 +2,13 @@ package com.projek.msib.api.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Set;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
@@ -37,6 +40,9 @@ public class Lokasi implements Serializable {
     protected void onCreate() {
         this.created_at = new Timestamp(System.currentTimeMillis());
     }
+
+    @ManyToMany(mappedBy = "lokasi")
+    private Set<Proyek> proyek;
 
     public Long getId() {
         return id;
@@ -84,5 +90,13 @@ public class Lokasi implements Serializable {
 
     public void setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
+    }
+
+    public Set<Proyek> getProyek() {
+        return proyek;
+    }
+
+    public void setProyek(Set<Proyek> proyek) {
+        this.proyek = proyek;
     }
 }
