@@ -10,28 +10,28 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projek.msib.api.model.User;
-import com.projek.msib.service.UserService;
+import com.projek.msib.api.model.Lokasi;
+import com.projek.msib.service.LokasiService;
 
 @RestController
 @RequestMapping("/lokasi")
-public class UserController {
+public class LokasiController {
 
     @Autowired
-    private UserService userService;
+    private LokasiService userService;
 
     @PostMapping
-    public User create(@RequestBody User user) {
+    public Lokasi create(@RequestBody Lokasi user) {
         return userService.save(user);
     }
 
     @GetMapping
-    public Iterable<User> findAll() {
+    public Iterable<Lokasi> findAll() {
         return userService.findAll();
     }
 
     @PutMapping
-    public User update(@RequestBody User user) {
+    public Lokasi update(@RequestBody Lokasi user) {
         return userService.save(user);
     }
 

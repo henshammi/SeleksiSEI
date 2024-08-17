@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "lokasi")
-public class User implements Serializable {
+public class Lokasi implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,10 +21,10 @@ public class User implements Serializable {
     private String kota;
     private Timestamp created_at;
 
-    public User() {
+    public Lokasi() {
     }
 
-    public User(Long id, String nama_lokasi, String negara, String provinsi, String kota, Timestamp created_at) {
+    public Lokasi(Long id, String nama_lokasi, String negara, String provinsi, String kota, Timestamp created_at) {
         this.id = id;
         this.nama_lokasi = nama_lokasi;
         this.negara = negara;
