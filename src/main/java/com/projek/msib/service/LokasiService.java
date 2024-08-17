@@ -13,17 +13,17 @@ import jakarta.transaction.Transactional;
 public class LokasiService {
 
     @Autowired
-    private LokasiRepository userRepository;
+    private LokasiRepository lokasiRepository;
 
-    public Lokasi save(Lokasi user) {
-        return userRepository.save(user);
+    public Lokasi save(Lokasi lokasi) {
+        return lokasiRepository.save(lokasi);
     }
 
     public Iterable<Lokasi> findAll() {
-        return userRepository.findAll();
+        return lokasiRepository.findAll();
     }
 
     public void removeOne(Long id) {
-        userRepository.deleteById(id);
+        lokasiRepository.deleteById(id);
     }
 }

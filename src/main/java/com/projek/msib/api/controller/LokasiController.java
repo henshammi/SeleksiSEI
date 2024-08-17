@@ -18,26 +18,26 @@ import com.projek.msib.service.LokasiService;
 public class LokasiController {
 
     @Autowired
-    private LokasiService userService;
+    private LokasiService lokasiService;
 
     @PostMapping
-    public Lokasi create(@RequestBody Lokasi user) {
-        return userService.save(user);
+    public Lokasi create(@RequestBody Lokasi lokasi) {
+        return lokasiService.save(lokasi);
     }
 
     @GetMapping
     public Iterable<Lokasi> findAll() {
-        return userService.findAll();
+        return lokasiService.findAll();
     }
 
     @PutMapping
-    public Lokasi update(@RequestBody Lokasi user) {
-        return userService.save(user);
+    public Lokasi update(@RequestBody Lokasi lokasi) {
+        return lokasiService.save(lokasi);
     }
 
     @DeleteMapping("/{id}")
     public void removeOne(@PathVariable("id") Long id) {
-        userService.removeOne(id);
+        lokasiService.removeOne(id);
     }
 
 }
