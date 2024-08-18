@@ -1,5 +1,7 @@
 package com.projek.msib.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,5 +27,13 @@ public class ProyekService {
 
     public void removeOne(Long id) {
         proyekRepository.deleteById(id);
+    }
+
+    public Proyek findOne(Long id) {
+        Optional<Proyek> proyek = proyekRepository.findById(id);
+        if (!proyek.isPresent()) {
+            return null;
+        }
+        return proyekRepository.findById(id).get();
     }
 }

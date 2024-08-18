@@ -1,5 +1,7 @@
 package com.projek.msib.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +30,10 @@ public class LokasiService {
     }
 
     public Lokasi findOne(Long id) {
+        Optional<Lokasi> lokasi = lokasiRepository.findById(id);
+        if (!lokasi.isPresent()) {
+            return null;
+        }
         return lokasiRepository.findById(id).get();
     }
 }
