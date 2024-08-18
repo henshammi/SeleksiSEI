@@ -40,4 +40,8 @@ public class LokasiController {
         lokasiService.removeOne(id);
     }
 
+    @GetMapping("/{id}")
+    public Lokasi findOne(@PathVariable("id") Long id) {
+        return lokasiService.findOne(id);
+    }
 }

@@ -26,4 +26,8 @@ public class LokasiService {
     public void removeOne(Long id) {
         lokasiRepository.deleteById(id);
     }
+
+    public Lokasi findOne(Long id) {
+        return lokasiRepository.findById(id).get();
+    }
 }
